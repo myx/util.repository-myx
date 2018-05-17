@@ -1,0 +1,54 @@
+
+
+#
+#
+# 'async cmd ...' ... then 'wait'
+#   first argument is actual command to execute
+#   second argument is used as stdout prefix
+#
+# 'gitSync repoId/packageId gitRepoUrl [branch]' 
+#
+#
+
+
+
+# If you are having problems with hosts singnatures, 
+# remove async before the command and type 'yes' when needed.
+async(){
+    local PREF="$(basename $2)"
+    echo "$PREF: async..."
+    echo "" | $@ 2>&1 | sed -e "s/^/$PREF: /" & # parallel
+}
+
+gitSync(){
+    set -e
+    local SRC="$APP/source/$1" 
+    local URL="$2"
+    local branch="$3"
+	[ -d "$SRC" ] && ({
+		cd "$SRC"
+		[ "$(git rev-parse --abbrev-ref HEAD)" != "${branch:-master}" ] && cd "$SRC/.." && rm -rf "$SRC" || true
+	}) || true;
+    [ -d "$SRC" ] || ({
+        echo "$(pwd) creating..."
+        mkdir -p "$SRC"
+        git clone "$URL" "$SRC"
+        [ -n $branch ] && cd "$SRC" && git checkout $branch && cd "$SRC/.."
+    });
+    [ -f "$SRC/README.md" ] || ({
+        cd "$SRC"
+        touch README.md
+        git add README.md
+        git commit -m "add/touch README"
+        git push -u
+    });
+    [ -d "$SRC" ] && ({
+        cd "$SRC"
+        echo "$(pwd) updating..."
+        git remote set-url origin "$URL"
+        [ -n $branch ] && git checkout $branch
+        git pull
+        git push
+        echo "$(pwd), finished."
+    }) || true;
+}
