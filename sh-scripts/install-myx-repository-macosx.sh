@@ -6,7 +6,7 @@
 ##       file-system) and on un-prepared OS. 
 ####
 
-PATH="$1"
-[ -z "$PATH" ] && echo "'$PATH' argument required" >&2 && exit 1
+TGT_APP_PATH="$TGT_APP_PATH"
+[ -z "$TGT_APP_PATH" ] && echo "'TGT_APP_PATH' env must be set" >&2 && exit 1
 
-echo "Installing myx.distro repository into: $PATH"
+echo "Installing myx.distro repository into: $TGT_APP_PATH"
