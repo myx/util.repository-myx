@@ -1,3 +1,13 @@
+######
+#
+#	This file is to be included (sourced) from other 
+#	scripts and $APP variable must be set before 
+#   sourcing this script.
+#
+######
+
+
+[ -z "$APP" ]  && echo "FATAL: $0: expecting '$APP' to be set!" >&2 && exit 1
 
 
 #

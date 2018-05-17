@@ -1,4 +1,4 @@
-#!/bin/sh
+#/bin/sh
 
 if [ -z "$APP" ] ; then
 	set -e
@@ -7,4 +7,6 @@ if [ -z "$APP" ] ; then
 	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
-. "$APP/source/myx/util.repository-myx/sh-scripts/sync-all-sources-myx.sh"
+. "$APP/source/myx/myx.distro-prepare/sh-lib/CompileProjectJava.include"
+
+CompileProjectJava "myx" "myx.distro-prepare"
