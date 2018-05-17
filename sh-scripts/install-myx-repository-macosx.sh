@@ -7,6 +7,6 @@
 ####
 
 PATH="$1"
-[ -z "$PATH" ] && echo "'$PATH' argument required" && exit 1
+[ -z "$PATH" ] && echo "'$PATH' argument required" >&2 && exit 1
 
 echo "Installing myx.distro repository into: $PATH"
