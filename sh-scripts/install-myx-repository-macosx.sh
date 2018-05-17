@@ -9,4 +9,12 @@
 TGT_APP_PATH="${TGT_APP_PATH:-$1}"
 [ -z "$TGT_APP_PATH" ] && echo "'TGT_APP_PATH' env must be set" >&2 && exit 1
 
+echo "Installing packages"
+
+# install git client, brew?
+
 echo "Installing myx.distro repository into: $TGT_APP_PATH"
+
+# download scripts and run them
+
+echo "Done."
