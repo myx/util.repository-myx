@@ -9,16 +9,18 @@ echo "Working in: $APP"
 
 . "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include"
 
-async gitSync "myx/clean-boot/"  "git@github.com:myx/clean-boot.git"
-async gitSync "myx/clean-jdbc.util/"  "git@github.com:myx/clean-jdbc.util.git"
-async gitSync "myx/clean-yaumnrc/"  "git@github.com:myx/clean-yaumnrc.git"
+async gitSync "myx/util.repository-myx/"	"git@github.com:myx/util.repository-myx.git"
+
+async gitSync "myx/clean-boot/"             "git@github.com:myx/clean-boot.git"
+async gitSync "myx/clean-jdbc.util/"        "git@github.com:myx/clean-jdbc.util.git"
+async gitSync "myx/clean-yaumnrc/"          "git@github.com:myx/clean-yaumnrc.git"
 
 wait
 
-async gitSync "myx/myx.os-common/"  "git@github.com:myx/myx.os-common.git"
+async gitSync "myx/myx.os-common/"   "git@github.com:myx/myx.os-common.git"
 async gitSync "myx/myx.os-freebsd/"  "git@github.com:myx/myx.os-freebsd.git"
-async gitSync "myx/myx.os-java/"  "git@github.com:myx/myx.os-java.git"
-async gitSync "myx/myx.os-ubuntu/"  "git@github.com:myx/myx.os-ubuntu.git"
+async gitSync "myx/myx.os-java/"     "git@github.com:myx/myx.os-java.git"
+async gitSync "myx/myx.os-ubuntu/"   "git@github.com:myx/myx.os-ubuntu.git"
 
 wait
 
