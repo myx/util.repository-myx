@@ -1,11 +1,11 @@
-# git clone https://github.com/myx/myx.os-common 	 ../../myx/myx.os-common
+# git clone https://github.com/myx/os-myx.common 	 ../../myx/os-myx.common
 
 git clone git@github.com:myx/clean-boot.git		     ../../myx/clean-boot
 git clone git@github.com:myx/clean-jdbc.util.git	 ../../myx/clean-jdbc.util
 git clone git@github.com:myx/clean-yaumnrc.git		 ../../myx/clean-yaumnrc
 
-git clone git@github.com:myx/myx.os-common.git		 ../../myx/myx.os-common
+git clone git@github.com:myx/os-myx.common.git		 ../../myx/os-myx.common
 git clone git@github.com:myx/myx-public.keys.git 	 ../../myx/myx-public.keys
-git clone git@github.com:myx/myx.os-ubuntu.git		 ../../myx/myx.os-ubuntu
+git clone git@github.com:myx/os-myx.common-ubuntu.git		 ../../myx/os-myx.common-ubuntu
 git clone git@github.com:myx/myx.os-java.git		 ../../myx/myx.os-java
-git clone git@github.com:myx/myx.os-freebsd.git		 ../../myx/myx.os-freebsd
+git clone git@github.com:myx/os-myx.common-freebsd.git		 ../../myx/os-myx.common-freebsd

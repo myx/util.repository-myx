@@ -17,10 +17,13 @@ async gitSync "myx/clean-yaumnrc/"          "git@github.com:myx/clean-yaumnrc.gi
 
 wait
 
-async gitSync "myx/myx.os-common/"   "git@github.com:myx/myx.os-common.git"
-async gitSync "myx/myx.os-freebsd/"  "git@github.com:myx/myx.os-freebsd.git"
-async gitSync "myx/myx.os-java/"     "git@github.com:myx/myx.os-java.git"
-async gitSync "myx/myx.os-ubuntu/"   "git@github.com:myx/myx.os-ubuntu.git"
+async gitSync "myx/os-myx.common/"          "git@github.com:myx/os-myx.common.git"
+async gitSync "myx/os-myx.common-freebsd/"  "git@github.com:myx/os-myx.common-freebsd.git"
+async gitSync "myx/os-myx.common-ubuntu/"   "git@github.com:myx/os-myx.common-ubuntu.git"
+
+async gitSync "myx/myx.os-java/"            "git@github.com:myx/myx.os-java.git"
 
 wait
 
+INF="$APP/source/myx/util.repository-myx/data/repository/repository.inf"
+( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$APP/source/myx/repository.inf"
