@@ -12,10 +12,6 @@
 
 #
 #
-# 'async cmd ...' ... then 'wait'
-#   first argument is actual command to execute
-#   second argument is used as stdout prefix
-#
 # 'gitSync repoId/packageId gitRepoUrl [branch]' 
 #
 #
@@ -25,9 +21,26 @@
 # If you are having problems with hosts singnatures, 
 # remove async before the command and type 'yes' when needed.
 async(){
-    local PREF="$(basename $2)"
-    echo "$PREF: async..."
-    echo "" | $@ 2>&1 | sed -e "s/^/$PREF: /" & # parallel
+	case "$1" in
+			"")
+				echo "async: prefix text argument is required!" >&2 ; exit 1
+				;;
+	        -1)
+				local PREFTEXT="`basename $2`"
+	            ;;
+	        -2)
+				local PREFTEXT="`basename $3`"
+	            ;;
+	        -3)
+				local PREFTEXT="`basename $4`"
+	            ;;
+	        *)
+				local PREFTEXT="$1"
+	esac
+	shift
+	
+    echo "$PREFTEXT: starting async..."
+    echo "" | $@ 2>&1 | sed -e "s/^/$PREFTEXT: /" & # parallel
 }
 
 gitSync(){
