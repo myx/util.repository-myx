@@ -11,6 +11,8 @@ fi
 
 async -2 gitSync "myx/util.repository-myx/"					"git@github.com:myx/util.repository-myx.git"
 
+async -2 gitSync "myx/myx.distro-prepare/"					"git@github.com:myx/myx.distro-prepare.git"
+
 async -2 gitSync "myx/clean-boot/"                        	"git@github.com:myx/clean-boot.git"
 async -2 gitSync "myx/clean-jdbc.util/"                   	"git@github.com:myx/clean-jdbc.util.git"
 async -2 gitSync "myx/clean-yaumnrc/"                     	"git@github.com:myx/clean-yaumnrc.git"
