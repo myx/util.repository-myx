@@ -7,24 +7,29 @@ if [ -z "$APP" ] ; then
 	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
-. "$APP/source/myx/util.repository-myx/sh-lib/syncing.sh.include"
+. "`myx.common which lib/async`"
+. "`myx.common which lib/gitCloneSync`"
 
-async -2 gitSync "myx/util.repository-myx/"					"git@github.com:myx/util.repository-myx.git"
+async(){
+	Async -2 GitCloneSync $@
+}
 
-async -2 gitSync "myx/myx.distro-prepare/"					"git@github.com:myx/myx.distro-prepare.git"
+async "myx/util.repository-myx/"				"git@github.com:myx/util.repository-myx.git"
 
-async -2 gitSync "myx/clean-boot/"                        	"git@github.com:myx/clean-boot.git"
-async -2 gitSync "myx/clean-jdbc.util/"                   	"git@github.com:myx/clean-jdbc.util.git"
-async -2 gitSync "myx/clean-yaumnrc/"                     	"git@github.com:myx/clean-yaumnrc.git"
+async "myx/myx.distro-prepare/"					"git@github.com:myx/myx.distro-prepare.git"
+
+async "myx/clean-boot/"                        	"git@github.com:myx/clean-boot.git"
+async "myx/clean-jdbc.util/"                   	"git@github.com:myx/clean-jdbc.util.git"
+async "myx/clean-yaumnrc/"                     	"git@github.com:myx/clean-yaumnrc.git"
 
 wait
 
-async -2 gitSync "myx/myx.common/os-myx.common/"          	"git@github.com:myx/os-myx.common.git"
-async -2 gitSync "myx/myx.common/os-myx.common-freebsd/"  	"git@github.com:myx/os-myx.common-freebsd.git"
-async -2 gitSync "myx/myx.common/os-myx.common-ubuntu/"   	"git@github.com:myx/os-myx.common-ubuntu.git"
-async -2 gitSync "myx/myx.common/os-myx.common-macosx/"   	"git@github.com:myx/os-myx.common-macosx.git"
+async "myx/myx.common/os-myx.common/"          	"git@github.com:myx/os-myx.common.git"
+async "myx/myx.common/os-myx.common-freebsd/"  	"git@github.com:myx/os-myx.common-freebsd.git"
+async "myx/myx.common/os-myx.common-ubuntu/"   	"git@github.com:myx/os-myx.common-ubuntu.git"
+async "myx/myx.common/os-myx.common-macosx/"   	"git@github.com:myx/os-myx.common-macosx.git"
 
-async -2 gitSync "myx/myx.os-java/"                       	"git@github.com:myx/myx.os-java.git"
+async "myx/myx.os-java/"                       	"git@github.com:myx/myx.os-java.git"
 
 wait
 
