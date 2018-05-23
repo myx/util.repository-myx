@@ -13,7 +13,7 @@ echo "Installing packages"
 
 # install git client, brew?
 
-echo "Installing myx.distro repository into: $TGT_APP_PATH"
+echo "Installing myx repository into: $TGT_APP_PATH"
 
 # download scripts and run them
 
