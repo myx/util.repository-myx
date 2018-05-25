@@ -1,10 +1,10 @@
 #!/usr/bin/env bash
 
-if [ -z "$APP" ] ; then
+if [ -z "$MMDAPP" ] ; then
 	set -e
-	APP="$( cd $(dirname "$0")/../../../.. ; pwd )"
-	echo "$0: Working in: $APP"  >&2
-	[ -d "$APP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
+	export MMDAPP="$( cd $(dirname "$0")/../../../.. ; pwd )"
+	echo "$0: Working in: $MMDAPP"  >&2
+	[ -d "$MMDAPP/source" ] || ( echo "expecting 'source' directory." >&2 && exit 1 )
 fi
 
 . "`myx.common which lib/async`"
@@ -33,5 +33,5 @@ async "myx/myx.os-java/"                       	"git@github.com:myx/myx.os-java.
 
 wait
 
-INF="$APP/source/myx/util.repository-myx/data/repository/repository.inf"
-( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$APP/source/myx/repository.inf"
+INF="$MMDAPP/source/myx/util.repository-myx/data/repository/repository.inf"
+( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$MMDAPP/source/myx/repository.inf"

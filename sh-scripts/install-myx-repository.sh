@@ -37,9 +37,9 @@ done
 ###########################################################
 echo "Installing myx repository into: $TGT_APP_PATH"
 
-export APP="$TGT_APP_PATH"
+export MMDAPP="$TGT_APP_PATH"
 
-myx.common lib/gitCloneSync "$APP/source/myx/util.repository-myx" "git@github.com:myx/util.repository-myx.git"
+myx.common lib/gitCloneSync "$MMDAPP/source/myx/util.repository-myx" "git@github.com:myx/util.repository-myx.git"
 
 ############
 echo "Done."
