@@ -9,4 +9,4 @@ if [ -z "$MMDAPP" ] ; then
 fi
 
 #"$MMDAPP/source/myx/util.repository-myx/sh-scripts/sync-all-sources-myx.sh"
-. "$MMDAPP/source/prv/util.workspace-ws2017/sh-scripts/sync-all-sources-ws2017.sh"
+. "$MMDAPP/source/prv/util.workspace-ws2017/sh-scripts/gitsync-ws2017.sh"
