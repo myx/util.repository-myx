@@ -16,7 +16,8 @@ async(){
 
 async "myx/util.repository-myx/"				"git@github.com:myx/util.repository-myx.git"
 
-async "myx/myx.distro-prepare/"					"git@github.com:myx/myx.distro-prepare.git"
+async "myx/myx.distro-source/"					"git@github.com:myx/myx.distro-source.git"
+async "myx/myx.distro-deploy/"					"git@github.com:myx/myx.distro-deploy.git"
 
 async "myx/myx-public.keys/"					"git@github.com:myx/myx-public.keys.git"
 
