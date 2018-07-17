@@ -21,6 +21,8 @@ async "myx/myx.distro-deploy/"					"git@github.com:myx/myx.distro-deploy.git"
 
 async "myx/myx-public.keys/"					"git@github.com:myx/myx-public.keys.git"
 
+wait
+
 async "myx/clean-boot/"                        	"git@github.com:myx/clean-boot.git"
 async "myx/clean-jdbc.util/"                   	"git@github.com:myx/clean-jdbc.util.git"
 async "myx/clean-yaumnrc/"                     	"git@github.com:myx/clean-yaumnrc.git"
@@ -31,8 +33,6 @@ async "myx/myx.common/os-myx.common/"          	"git@github.com:myx/os-myx.commo
 async "myx/myx.common/os-myx.common-freebsd/"  	"git@github.com:myx/os-myx.common-freebsd.git"
 async "myx/myx.common/os-myx.common-ubuntu/"   	"git@github.com:myx/os-myx.common-ubuntu.git"
 async "myx/myx.common/os-myx.common-macosx/"   	"git@github.com:myx/os-myx.common-macosx.git"
-
-async "myx/myx.os-java/"                       	"git@github.com:myx/myx.os-java.git"
 
 wait
 
