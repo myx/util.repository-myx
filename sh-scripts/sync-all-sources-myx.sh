@@ -12,12 +12,17 @@ fi
 
 async(){
 	Async -2 GitCloneSync "$MMDAPP/source/$@"
+	# Async -3 myx.common lib/gitCloneSync "$MMDAPP/source/$@"
 }
 
 async "myx/util.repository-myx/"				"git@github.com:myx/util.repository-myx.git"
 
 async "myx/myx.distro-source/"					"git@github.com:myx/myx.distro-source.git"
 async "myx/myx.distro-deploy/"					"git@github.com:myx/myx.distro-deploy.git"
+
+async "myx/myx.common/os-java"					"git@github.com:myx/myx-distro-meta-os-java.git"
+# async "myx/myx.common/os-ruby"				"git@github.com:myx/myx-distro-meta-os-ruby.git"
+# async "myx/myx.common/os-golang"				"git@github.com:myx/myx-distro-meta-os-golang.git"
 
 async "myx/myx-public.keys/"					"git@github.com:myx/myx-public.keys.git"
 
