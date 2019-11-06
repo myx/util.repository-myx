@@ -32,6 +32,9 @@ async "myx/clean-boot/"                        	"git@github.com:myx/clean-boot.g
 async "myx/clean-jdbc.util/"                   	"git@github.com:myx/clean-jdbc.util.git"
 async "myx/clean-yaumnrc/"                     	"git@github.com:myx/clean-yaumnrc.git"
 
+
+async "myx/web/static-cdn.myx/"					"git@github.com:myx/web-static-cdn.myx.git"
+
 wait
 
 async "myx/myx.common/os-myx.common/"          	"git@github.com:myx/os-myx.common.git"
