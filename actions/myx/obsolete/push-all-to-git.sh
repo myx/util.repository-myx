@@ -1,12 +1,6 @@
 #/bin/sh
 
-if [ -z "$MMDAPP" ] ; then
-	set -e
-	export MMDAPP="$( cd $(dirname "$0")/../../../../../.. ; pwd )"
-	echo "$0: Working in: $MMDAPP"  >&2
-	[ -d "$MMDAPP/source" ] || ( echo "ERROR: expecting 'source' directory." >&2 && exit 1 )
-fi
-
+[ -d "$MMDAPP/source" ] || ( echo "ERROR: expecting 'source' directory." >&2 && exit 1 )
 
 # . "$MMDAPP/actions/myx/export-myx.ru-to-acm2h1.myx.ru.sh"
 # . "$MMDAPP/actions/farm/rsync-dns-from-acm2h1.sh"
