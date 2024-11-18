@@ -27,7 +27,7 @@ FetchStdout(){
 
 FetchStdout https://raw.githubusercontent.com/myx/os-myx.common/master/sh-scripts/install-myx.common.sh -o - | sh -e
 
-myx.common lib/installEnsurePackage bash git nano
+myx.common lib/installEnsurePackage bash git nano || true
 
 echo "Installing myx repository into: $TGT_APP_PATH"
 
