@@ -2,4 +2,8 @@ Type: ae3.Package
 Name: util.repository-myx
 Info: Repository actions package (with repository installer)
 Provides: myx/actions:actions 
-Declares: distro-repository-sync:sh-scripts/sync-all-sources-myx.sh
+Declares: \
+	image-distro-sync:source-prepare:pull:repo:myx/util.repository-myx:git@github.com:myx/util.repository-myx.git \
+	image-distro-sync:source-prepare:exec:.:sh-scripts/sync-all-sources-myx.sh \
+	distro-repository-sync:sh-scripts/sync-all-sources-myx.sh \
+
