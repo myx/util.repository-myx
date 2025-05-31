@@ -4,6 +4,7 @@ Info: Repository actions package (with repository installer)
 Provides: myx/actions:actions 
 Declares: \
 	distro-image-sync:source-prepare-pull:repo:myx/util.repository-myx:master:git@github.com:myx/util.repository-myx.git \
+	distro-image-sync:source-prepare-pull:list:.:sh-data/repository/remotes-list-myx.txt \
 	distro-image-sync:source-prepare-pull:exec:.:sh-scripts/sync-all-sources-myx.sh \
-	distro-repository-sync:sh-scripts/sync-all-sources-myx.sh \
+	--distro-repository-sync:sh-scripts/sync-all-sources-myx.sh \
 

@@ -48,5 +48,5 @@ async "myx/myx.common/os-myx.common-macosx/"   	"git@github.com:myx/os-myx.commo
 
 wait
 
-INF="$MMDAPP/source/myx/util.repository-myx/data/repository/repository.inf"
+INF="$MMDAPP/source/myx/util.repository-myx/sh-data/repository/repository.inf"
 ( set -e ; echo "# copied from $INF at `date`" ; cat "$INF" ) > "$MMDAPP/source/myx/repository.inf"
