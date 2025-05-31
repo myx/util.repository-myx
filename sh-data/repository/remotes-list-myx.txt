@@ -1,7 +1,10 @@
 myx/util.repository-myx/				git@github.com:myx/util.repository-myx.git
 
+myx/myx.distro-.local/					git@github.com:myx/myx.distro-.local.git
+myx/myx.distro-system/					git@github.com:myx/myx.distro-system.git
 myx/myx.distro-source/					git@github.com:myx/myx.distro-source.git
 myx/myx.distro-deploy/					git@github.com:myx/myx.distro-deploy.git
+myx/myx.distro-remote/					git@github.com:myx/myx.distro-remote.git
 
 myx/myx.common/os-java					git@github.com:myx/myx-distro-meta-os-java.git
 # myx/myx.common/os-ruby				git@github.com:myx/myx-distro-meta-os-ruby.git
