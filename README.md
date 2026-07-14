@@ -1,3 +1,6 @@
+# util.repository-myx
+
+Bootstraps a `myx` workspace from scratch — clones/updates the set of repos a `myx` workspace needs, using `sh-data/repository/remotes-list-myx.txt` as the authoritative list of `<local-path> <git-remote-url>` pairs. Run one of the following on a fresh machine:
 
 	or
 
