@@ -14,6 +14,7 @@ myx/clean-boot/                        	git@github.com:myx/clean-boot.git
 myx/clean-jdbc.util/                   	git@github.com:myx/clean-jdbc.util.git
 myx/clean-yaumnrc/                     	git@github.com:myx/clean-yaumnrc.git
 
+myx/clean-java.crypto/                 	git@github.com:myx/clean-java.crypto.git
 myx/clean-java.e5/                     	git@github.com:myx/clean-java.e5.git
 myx/clean-java.io/                     	git@github.com:myx/clean-java.io.git
 myx/clean-java.util/                   	git@github.com:myx/clean-java.util.git
